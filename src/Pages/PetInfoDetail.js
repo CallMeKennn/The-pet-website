@@ -24,6 +24,7 @@ const PetInfoDetail = () => {
     const idUser = localStorage.getItem("idUser");
     const status = ["alive", "deceased", "other", "missing"];
     let { state } = useLocation();
+
     useEffect(() => {
         const callApi = async () => {
             try {
@@ -102,7 +103,7 @@ const PetInfoDetail = () => {
     };
 
     const handleAddVisit = async () => {
-        if ((new Date(visitDate) <= new Date()) || visitDate === "") {
+        if (new Date(visitDate) <= new Date() || visitDate === "") {
             alert("Please select a date in the future.");
         } else {
             try {
@@ -113,12 +114,13 @@ const PetInfoDetail = () => {
                 const dataRequest = {
                     petId: state.id,
                     date: visitDate,
-                    comment: comment,
+                    comment: commentDoctor,
                 };
                 const responseVisit = await axiosClient.post(`/visits`, dataRequest, { headers });
-                setComment("");
+                console.log(responseVisit)
+                setPet((prev) => ({ ...prev, visits: [...prev.visits, responseVisit.data.visit] }));
                 setVisitDate("");
-
+                setCommentDoctor("");
                 toast.success(responseVisit.data.message, {
                     position: "top-right",
                     autoClose: 5000,
