@@ -1,0 +1,73 @@
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-size: 1.6rem;
+
+    .login {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 20px;
+        border: 2px solid rgb(0, 0, 0);
+        box-shadow: 0 0 70px 0px rgba(0, 0, 0, 0.5);
+    }
+
+
+}
+
+.form {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    height: 45rem;
+    width: 40rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .logo-parent{
+        margin-bottom: 5rem;
+    }
+
+    .logo-parent img{
+        width: 20rem;
+        height: 100%;
+    }
+
+    h2{
+        font-size: 1.6rem;
+        font-weight: 600;
+    }
+
+    button, input{
+        width: 30rem;
+        border-radius: 50px;
+        padding: 1rem 2rem;
+        margin-top: 1.5rem;
+    }
+
+    button{
+        color: #fff;
+        background-color: #e14d4d;
+    }
+   
+}
+
+.petImage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 45rem;
+    width: 48rem;
+    background-color: aqua;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+
+    img {
+        width: 40rem;
+    }
+}
+
+

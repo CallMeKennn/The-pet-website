@@ -1,0 +1,21 @@
+.doctor-container{
+    max-width: 100%;
+
+    .container{
+        max-width: 70%;
+        display: flex;
+        margin-top: 50px;
+        justify-content: space-around;
+        font-size: 1.8rem;
+    }
+
+    .container__filter{
+        width: 25%;
+        float: left;
+    }
+
+    .container__listPet{
+        width: 70%;
+        float: right;
+    }
+}

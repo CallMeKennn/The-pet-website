@@ -1,0 +1,24 @@
+.pet{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 15rem;
+    height: 15rem;
+    border: 2px solid #333;
+    margin-right: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.dog{
+    background-color: #66adad;
+}
+
+.cat{
+    background-color: #ccab80;
+}
+
+.link{
+    text-decoration: none;
+    color: #146355;
+}
